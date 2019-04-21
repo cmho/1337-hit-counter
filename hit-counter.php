@@ -20,10 +20,11 @@
 
   class Hit_Counter_Widget extends WP_Widget {
     public function __construct() {
-      $widget_opts = array(
-        'classname' => 'hit-counter',
-        'description' => 'A hit counter displaying unique page hits across your site for non-logged-in users.'
-      );
+      parent::__construct(array(
+        'hit-counter',
+        'Hit Counter',
+        'A hit counter displaying unique page hits across your site for non-logged-in users.'
+      ));
     }
 
     public function widget($args, $instance) {
